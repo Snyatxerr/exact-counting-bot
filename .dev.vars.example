@@ -1,0 +1,2 @@
+DISCORD_BOT_TOKEN=replace_locally_never_commit
+# 本番は wrangler secret put DISCORD_BOT_TOKEN を使用

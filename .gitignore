@@ -1,0 +1,13 @@
+node_modules/
+.wrangler/
+dist/
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
+# Local deployment IDs/public key; copy wrangler.jsonc.example after cloning.
+wrangler.jsonc
+.secrets/
+*.log
+.audit/
+.test-state/

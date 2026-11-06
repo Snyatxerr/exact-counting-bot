@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "exact-counting-bot",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-11-06",
+  "durable_objects": {
+    "bindings": [{ "name": "BOT", "class_name": "CountingBot" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["CountingBot"] }],
+  "triggers": { "crons": ["* * * * *"] },
+  "vars": {
+    "ALLOWED_GUILD_ID": "YOUR_GUILD_ID",
+    "DISCORD_APPLICATION_ID": "YOUR_APPLICATION_ID",
+    "DISCORD_PUBLIC_KEY": "YOUR_DISCORD_PUBLIC_KEY"
+  },
+  "observability": { "enabled": false }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc",
+    "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "deploy": "wrangler deploy",
+    "register": "node scripts/register.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@cortex-js/compute-engine": "0.181.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261106.1",
+    "esbuild": "0.28.2",
+    "miniflare": "5.20261104.0-beta",
+    "node": "26.13.0",
+    "prettier": "3.6.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "wrangler": "4.158.0"
+  },
+  "allowScripts": {
+    "node@26.13.0": true,
+    "esbuild@0.25.12": true,
+    "esbuild@0.28.2": true,
+    "workerd@1.20261104.1": true
+  },
+  "private": true,
+  "engines": {
+    "node": ">=26.13.0 <27"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "counting-local-test",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-11-06",
+  "durable_objects": {
+    "bindings": [{ "name": "BOT", "class_name": "CountingBot" }],
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["CountingBot"] }],
+  "vars": {
+    "TEST_MODE": "local",
+    "ALLOWED_GUILD_ID": "1",
+    "DISCORD_APPLICATION_ID": "2",
+    "DISCORD_PUBLIC_KEY": "",
+  },
+}
